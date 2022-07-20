@@ -19,7 +19,7 @@ click on the image below to see a <a href="https://tasksmaker.netlify.app/">Demo
 
 
 
-<h4 style="color: #000000;"> Please give ⭐ it a start and don't forget to fork the repositofy</h4>
+<h4 style="color: #000000;"> Please give ⭐ it a star and don't forget to fork the repositofy</h4>
 
 <a href="https://github.com/bruxx-6243">Fariol Blondeau - BRUXX DEV</a>
 
