@@ -7,7 +7,7 @@
 <hr />
 
 
-### Make task is a todo app using vanilla JavaScript
+### Daily Task is a todo app using vanilla JavaScript
 
 click on the image below to see a <a href="https://tasksmaker.netlify.app/">Demo</a>
 
