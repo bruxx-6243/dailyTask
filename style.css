@@ -100,7 +100,12 @@ h4{
     background-color: #fff;
     border-radius: .25rem;
     box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
+    
+}
+
+.error{
+    font-style: italic;
+    color: var(--danger);
 }
 
 .create-todo .options{
@@ -260,3 +265,9 @@ input:checked ~ .bubble::after{
     color: var(--grey);
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

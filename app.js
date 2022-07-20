@@ -21,17 +21,34 @@ window.addEventListener('load', () => {
 			createdAt: new Date().getTime()
 		}
 
+		// Validation add of un input
+		const error = document.querySelector('.error');
+		const inputBox = document.querySelector('.create-todo input[type="text"]');
+		if(todo.content == 0){
+			error.innerHTML = `Please you can't add an empty task***`;
+			inputBox.style.border = '2px solid hsl(1, 100%, 67%)';
+			return ;
+		}else{
+			error.innerHTML = "";
+			inputBox.style.border = 'none';
+		}
+
 		todos.push(todo);
 
 		localStorage.setItem('todos', JSON.stringify(todos));
 
-		// Reset the form
 		e.target.reset();
 
 		DisplayTodos()
 	})
 
 	DisplayTodos()
+
+	// Year, hours and minutes
+	document.querySelector('.current-year').innerText = new Date().getFullYear();
+	document.querySelector('.hours').innerText = new Date().getHours();
+	document.querySelector('.minuts').innerText = new Date().getMinutes();
+
 })
 
 function DisplayTodos () {
@@ -41,6 +58,8 @@ function DisplayTodos () {
 	todos.forEach(todo => {
 		const todoItem = document.createElement('div');
 		todoItem.classList.add('todo-item');
+
+		console.log(todoItem.length);
 
 		const label = document.createElement('label');
 		const input = document.createElement('input');
@@ -77,6 +96,7 @@ function DisplayTodos () {
 		todoItem.appendChild(content);
 		todoItem.appendChild(actions);
 
+		
 		todoList.appendChild(todoItem);
 
 		if (todo.done) {
@@ -118,4 +138,5 @@ function DisplayTodos () {
 		})
 
 	})
+
 }

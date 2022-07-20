@@ -49,8 +49,9 @@
             <form id="new-todo-form">
                 <h4>What's on your todo list ?</h4>
                 <input type="text" name="content" id="content" placeholder="Type anything">
+                <span class="error"></span>
 
-                <h4>Pick a category</h4>
+                <h4 style="margin-top: 1.5rem;">Pick a category</h4>
                 <div class="options">
 
                     <label>
@@ -73,8 +74,14 @@
 
         <section class="todo-list">
             <h3>TODO LIST</h3>
+            <!-- <p>Total : <span class="total-task">20</span> Tasks</p> -->
 
             <div class="list" id="todo-list"></div>
+        </section>
+
+        <section class="footer">
+            <p>&copy BRUXX DEV <span class="current-year"></span></p>
+            <p>It's currently <span class="hours"></span> : <span class="minuts"></span> in your region</p>  
         </section>
     </main>
 
