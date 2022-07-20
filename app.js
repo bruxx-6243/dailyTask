@@ -46,8 +46,19 @@ window.addEventListener('load', () => {
 
 	// Year, hours and minutes
 	document.querySelector('.current-year').innerText = new Date().getFullYear();
-	document.querySelector('.hours').innerText = new Date().getHours();
-	document.querySelector('.minuts').innerText = new Date().getMinutes();
+
+	const addZero = zero =>{
+		if (zero < 10) {zero = "0" + zero}
+  		return zero;
+	}
+
+	const timeZone = () =>{
+		const hours = addZero(new Date().getHours());
+		const minutes = addZero(new Date().getMinutes());
+		const currentTime = `${hours} : ${minutes}`;
+		document.querySelector('.time').innerHTML = currentTime;
+	}
+	timeZone();
 
 })
 
